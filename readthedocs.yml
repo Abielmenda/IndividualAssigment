@@ -1,0 +1,19 @@
+# readthedocs.yml
+version: 2
+
+sphinx:
+  configuration: null
+python:
+  version: 3.11
+  install:
+    - requirements: requirements.txt
+
+mkdocs:
+  configuration: mkdocs.yml
+
+build:
+  image: latest 
+  jobs: 2
+
+formats:
+  - html

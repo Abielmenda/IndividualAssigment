@@ -1,0 +1,7 @@
+beautifulsoup4
+pandas
+matplotlib
+wordcloud
+nltk
+lxml
+pytest

@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xsi:schemaLocation="http://www.tei-c.org/ns/1.0 https://raw.githubusercontent.com/kermitt2/grobid/master/grobid-home/schemas/xsd/Grobid.xsd">
+	<teiHeader xml:lang="en">
+		<fileDesc>
+			<titleStmt>
+				<title level="a" type="main">Transportation Models and Unsupervised Learning Methods to Minimize Food Waste in Schools of Medellin</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>IEEE</publisher>
+				<availability status="unknown">
+					<licence/>
+				</availability>
+				<date type="published" when="2024-10-23">2024-10-23</date>
+			</publicationStmt>
+			<sourceDesc>
+				<biblStruct>
+					<analytic>
+						<author>
+							<persName><forename type="first">Cristian</forename><forename type="middle">David</forename><surname>Ayala Martinez</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Manuela</forename><forename type="middle">Londoño</forename><surname>Guarín</surname></persName>
+							<affiliation key="aff1">
+								<orgName type="institution">Escuela OPINA Politécnico Grancolombiano Medellín</orgName>
+								<address>
+									<country key="CO">Colombia</country>
+								</address>
+							</affiliation>
+						</author>
+						<author>
+							<persName><forename type="first">Samuel</forename><forename type="middle">Vallejo</forename><surname>Castañeda</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Vanesa</forename><forename type="middle">Alexandra</forename><surname>Triana Muñoz</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Daniela</forename><forename type="middle">Payares</forename><surname>Cardona</surname></persName>
+						</author>
+						<author>
+							<persName><forename type="first">Juan</forename><forename type="middle">Sebastián</forename><surname>Sánchez-Gómez</surname></persName>
+							<idno type="ORCID">0000-0001-5199-7486</idno>
+						</author>
+						<title level="a" type="main">Transportation Models and Unsupervised Learning Methods to Minimize Food Waste in Schools of Medellin</title>
+					</analytic>
+					<monogr>
+						<title level="m">2024 21st International Conference on Electrical Engineering, Computing Science and Automatic Control (CCE)</title>
+						<imprint>
+							<publisher>IEEE</publisher>
+							<biblScope unit="page" from="1" to="6"/>
+							<date type="published" when="2024-10-23"/>
+						</imprint>
+					</monogr>
+					<idno type="MD5">6F314DB90B5EF061BF89A9F21DC57F57</idno>
+					<idno type="DOI">10.1109/cce62852.2024.10770962</idno>
+					<note type="submission">Authorized licensed use limited to: Univ Politecnica de Madrid. Downloaded on March 04,2026 at 15:08:25 UTC from IEEE Xplore. Restrictions apply.</note>
+				</biblStruct>
+			</sourceDesc>
+		</fileDesc>
+		<encodingDesc>
+			<appInfo>
+				<application version="0.8.2" ident="GROBID" when="2026-03-09T18:07+0000">
+					<desc>GROBID - A machine learning software for extracting information from scholarly documents</desc>
+					<label type="revision">a91ee48</label>
+					<label type="parameters">startPage=-1, endPage=-1, consolidateCitations=0, consolidateHeader=1, consolidateFunders=0, includeRawAffiliations=false, includeRawCitations=false, includeRawCopyrights=false, generateTeiIds=false, generateTeiCoordinates=[], sentenceSegmentation=false, flavor=null</label>
+					<ref target="https://github.com/kermitt2/grobid"/>
+				</application>
+			</appInfo>
+		</encodingDesc>
+		<profileDesc>
+			<textClass>
+				<keywords>
+					<term>Transportation models</term>
+					<term>unsupervised learning methods</term>
+					<term>food waste</term>
+				</keywords>
+			</textClass>
+			<abstract>
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>This research creates alternative vehicle routing plans for schools and marketplaces using unsupervised transportation models and learning methods. This initiative seeks to optimize food distribution logistics and reduce waste, thereby improving access to fresh food and mitigating food insecurity. The methodology involves the application of transportation models and unsupervised learning techniques to develop efficient vehicle routing plans. This study utilizes the Kmeans algorithm to identify vulnerable and privileged areas in Medellín, focusing on schools and marketplaces. Data collection and preparation are crucial steps, ensuring that the information accurately reflects the realities of food distribution. The gravity method is also employed to optimize delivery routes by considering factors such as distance, traffic, and vehicle load capacity. The vulnerable areas and the establishment of collection points for food aid were identified. The K-means algorithm helped determine centroids for both distribution and collection centers, facilitating the planning of logistics for food redistribution. A detailed map was created to visualize these zones, which will serve as essential tools for planning relief activities. The study also highlights the significant amount of food wasted in Medellín's marketplaces, emphasizing the need for effective routing to minimize this waste. The project achieved its objectives by identifying strategic locations for distribution centers and optimizing delivery routes. However, it faced challenges such as the lack of real-time data on population and food distribution. Future recommendations include integrating advanced data collection technologies and implementing a route management system using machine learning algorithms to adapt to changing conditions.</p></div>
+			</abstract>
+		</profileDesc>
+	</teiHeader>
+	<text xml:lang="en">
+		<body>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>I. INTRODUCTION</head><p>Have you ever wondered how much food is wasted in our cities and how this affects the food security of its inhabitants? In Medellín, an alarming amount of food is lost on the road between production and consumption, representing a waste of resources and aggravating food insecurity in vulnerable communities. This research project proposes to address this problem by creating alternative vehicle routing plans in schools and marketplaces in the city, using unsupervised transportation models and learning methods. This initiative seeks to optimize food distribution logistics and contribute to reducing food waste, a critical problem affecting food security in the region <ref type="bibr" target="#b0">[1]</ref>. The intersection between efficient logistics and the mitigation of food insecurity becomes a central axis of this study, given that route optimization can facilitate access to fresh food and reduce losses in the distribution process <ref type="bibr" target="#b1">[2]</ref>.</p><p>The development of delivery routes is the second specific objective, where the gravity method will be applied. This method considers factors such as distance, traffic, and vehicle load capacity, which will allow optimizing routes between distribution centers <ref type="bibr" target="#b2">[3]</ref>. The implementation of this approach not only seeks to improve operational efficiency but also to minimize the associated logistics costs, which is essential in a context where every resource counts <ref type="bibr" target="#b3">[4]</ref>.</p><p>Next, delivery routes will be developed based on the gravity method, which considers factors such as distance, traffic, and vehicle carrying capacity. This approach seeks not only to improve operational efficiency but also to minimize logistics costs, a crucial aspect in a context where every resource counts <ref type="bibr" target="#b2">[3]</ref>.</p><p>In addition, the k-means algorithm used to minimize food delivery times in distribution centers will be implemented, which will reduce logistics costs and increase the availability of fresh food in the neediest communities <ref type="bibr" target="#b4">[5]</ref>. Delivery agility is a determining factor in ensuring that food arrives in optimal conditions and reducing the risk of wastage <ref type="bibr" target="#b5">[6]</ref>.</p><p>The project is supported by the review of existing literature on distribution logistics and food waste. Previous studies have shown that proper logistics planning can significantly reduce food waste in different contexts, which reinforces the relevance of this research <ref type="bibr" target="#b6">[7]</ref>. The combination of transportation modeling and unsupervised learning methods offers an innovative approach that can be replicated in other cities with similar problems <ref type="bibr" target="#b3">[4]</ref>.</p><p>The issue of food waste is not only limited to the loss of resources but also has significant environmental implications. According to UNEP's Food Waste Index Report 2024, it is estimated that approximately 1.3 billion tons of food is lost or wasted annually, contributing to about 10% of all greenhouse gas emissions <ref type="bibr" target="#b7">[8]</ref>. This environmental impact is of particular concern in cities such as Medellín, where optimizing distribution logistics could not only reduce waste but also help mitigate climate change by reducing emissions associated with food transportation.</p><p>In addition, education and community awareness are crucial to address food waste. A study conducted by WRAP in 2024 highlights that awareness campaigns and educational interventions can lead to a significant reduction in household food waste <ref type="bibr" target="#b8">[9]</ref>. These initiatives inform consumers on how to better store and use food and foster a culture of responsibility in resource management. Implementing education programs in schools and marketplaces in Medellín could be a fundamental step to empower the community and reduce waste.</p><p>On the other hand, it is essential to consider the role of technology in optimizing the food supply chain. Recent research suggests that the use of advanced logistics models can significantly improve efficiency in food distribution, which in turn can reduce waste <ref type="bibr" target="#b9">[10]</ref>. The integration of technologies such as data analytics and artificial intelligence into route planning can facilitate more effective distribution, ensuring that food reaches its destination in optimal condition and at the right time.</p><p>Finally, collaboration between different sectors is essential to address food waste comprehensively. FAO emphasizes that partnerships between governments, businesses, and nongovernmental organizations are essential to develop effective strategies to address waste throughout the supply chain <ref type="bibr" target="#b10">[11]</ref>. In Medellín, fostering these collaborations could enhance efforts to implement innovative and sustainable logistics solutions, thus contributing to improving food security and reducing waste in the city.</p><p>In summary, this research project not only focuses on the optimization of food distribution logistics but also seeks to address the problem of food waste in Medellin. Through the implementation of efficient transportation models and the use of innovative methods, it is expected to contribute significantly to food security in the city. The combination of technology, education, and cross-sector collaboration is essential to achieve a lasting impact in reducing food waste and improving the quality of life of its inhabitants.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>II. METHODOLOGY</head><p>This research seeks to create alternative vehicle routing plans in schools and marketplaces in Medellín using transportation models and unsupervised learning methods to minimize the amount of food wasted and help mitigate food insecurity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Methods</head><p>According to a report by the United Nations Environment Program (UNEP), a total of 9.76 million tons of food are lost and wasted in Colombia each year, equivalent to approximately 269 kilograms per person per year. Of this total, it is estimated that between 30% and 40% is wasted at the retail stage, which includes marketplaces. This means that, in Medellin, between 23 and 36 tons of food could be wasted daily in the marketplaces <ref type="bibr" target="#b7">[8]</ref>, it is estimated that between 22% and 26% of the food that arrives at the Retail Plaza, the second largest in the region, ends up in the garbage. How can we reduce the percentage of waste? What strategies should we take to reduce hunger in families of lower strata in Medellin? Which neighborhoods are the most attacked by hunger in Medellin?</p><p>In 2023, the District Administration partnered with Coomerca, the José María Villa Retail Plaza's merchants' cooperative, to recover over 40,000 kilos of fruits and vegetables. From May to December, these were distributed to 1,436 vulnerable families through a project focused on managing food loss and waste of unmarketable but consumable produce <ref type="bibr" target="#b11">[12]</ref>. Thanks to this type of initiative, we seek to propose different forms of routing that go from the sources of waste to some vulnerable areas to support the fight against food insecurity in the area using routes that optimize activities and reduce delivery times to these areas.</p><p>To reduce the percentage of food waste in Medellín and combat hunger in lower-income families, it is essential to implement effective strategies. Through the application of transportation tools (gravity method) and unsupervised learning methods (k-means). This project focuses on managing losses and waste of unmarketable food fit for human consumption. The key is to design efficient routes that connect the sources of waste with the area's most in need, optimizing activities and reducing delivery times. This will help close the food insecurity gap in Medellín, especially in the most vulnerable communities.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. Procedure</head><p>According to DANE, Medellín's communes 1, 2, 3, and 4 are the most affected by chronic child malnutrition due to higher concentrations of children per household. In these areas, malnutrition is more prevalent in neighborhoods where families have more children, highlighting a link between larger households and nutritional challenges <ref type="bibr" target="#b12">[13]</ref>, for this reason, the focus of the project is directly related to these communes, for which a clustering method will be carried out through k-means, where the centroids, will be the areas closest to the distribution foci, for the realization of this method, the schools in the northeastern areas of Medellin will be considered. According to DANE data, there are 420 active official schools in Medellin <ref type="bibr" target="#b13">[14]</ref>, using the Pandas tool in Python, data cleaning is performed.</p><p>The K-means algorithm has two variations: the classical "lloyd" EM-style and the more efficient "elkan," which can speed up clustering on datasets with clear clusters using the triangle inequality. However, "elkan" requires more memory, needing an additional array of shapes (n_samples, n_clusters) <ref type="bibr">[15]</ref>. Using the triangle inequality improves clustering accuracy since the Elkan algorithm reduces the number of calculations between points and centers. This optimized approach is based on the fact that many distance calculations in standard K-means are redundant. If a point is far from a center, the exact distance isn't needed to determine that the point shouldn't be assigned to that center, thereby enhancing efficiency without compromising the clustering results. This makes Elkan particularly useful for well-defined clusters <ref type="bibr" target="#b14">[16]</ref>.</p><p>Between 10% and 25% of fresh food is wasted in Medellin's marketplaces <ref type="bibr" target="#b15">[17]</ref>, which is why the four most influential marketplaces in the city were identified.</p><p>TABLE I. MARKETPLACES. Place name Latitude Length Plaza de las flores 6.245824636049838 -75.55992885986224 La América Market Square 6.252061064226442 -75.59876677726014 Campo Valdés Square 6.274493643385052 -75.55897940424222 José María Villa Retail Plaza 6.25781433228485 -75.57343891773355</p><p>By the k-means model, two types of centroids (distribution and collection) can be determined. The distribution centroids will be those whose areas are privileged and depending on the time of year, it is known that food is wasted, which is why it is proposed that, in these times of wastage, this food will be taken to the collection centers and will be of help to society. The collection centers will be those determined by the schools in the most vulnerable areas of the city to be a point of delivery to the families in this area in times of need. These collection centers will also be used for routing from the city's supply centers (marketplaces) where food is wasted, seeking the routing, to support the city's logistical efforts to minimize this waste and support the fight against food insecurity.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>III. RESULTS</head></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>A. Identification of vulnerable areas</head><p>The identification of vulnerable areas in Medellin is a vital part of the project. Although of Secretary of Education of Medellin, schools belonging to vulnerable communities were identified for the activity, in addition to identifying privileged areas <ref type="bibr" target="#b16">[18]</ref>.  It is of great importance for the project to cluster the most vulnerable area to show different collection points that will function as collection centers for the aid that may occur at different times of the year. To achieve this, the Python tool is used together with its sklearn library, which is essential to carry out the modeling and coding necessary to obtain the centroids of the identified zones.</p><p>The process begins with the collection and preparation of relevant data, ensuring that they accurately reflect the reality of the area under study. Once the data are ready, clustering techniques, such as the K-means algorithm, are applied to identify the centroids of the most vulnerable areas. These centroids represent the central points of each cluster, which are transformed into safe zones of Medellín.</p><p>The transformation of the centroids to safe zones involves a detailed analysis of the geography and specific characteristics of each area, ensuring that the collection points are accessible and effective for the distribution of aid. Finally, a detailed map showing safe zones and collection points is obtained, providing a valuable tool for planning and executing relief activities throughout the year.</p><p>TABLE II. MARKETPLACES. Place name Latitude Length Plaza de las flores 6.245824636049838 -75.55992885986224 La América Market Square 6.252061064226442 -75.59876677726014 Campo Valdés Square 6.274493643385052 -75.55897940424222 José María Villa Retail Plaza 6.25781433228485 -75.57343891773355 Fig. 3. Distribution of schools in vulnerable zones.</p><p>TABLE III. ASSIGNED CENTROIDS EXTRAPOLATED TO THE CITY. UVA De La Alegria Manrique 6.271906205802736 -75.5498466560177 Granizal sports unit 6.291637318059501 -75.54499302584072 Andalucia court 6.297749038227374 -75.55349010079652 San Cayetano Parish 6.2824416328413895 -75.56152392800885</p><p>A combination of the gravity model and Euclidean distance calculations allows extrapolating coordinates to new strategic points. The gravity model serves as a central reference between collection centers, facilitating interaction among the various beneficiary points. This approach makes it possible to identify a general point that can be extrapolated to strategic locations in the city's vulnerable areas. The gravity center method is simple to use and provides a good approximation for a low-cost solution, making it highly effective in optimizing resource distribution across targeted regions <ref type="bibr" target="#b17">[19]</ref> The center-of-gravity model is ideal for unitary network layouts, which involve establishing a single logistics network in a planned area. It simplifies network distribution by focusing on one central hub, making it effective for logistics in various circulation scenarios <ref type="bibr" target="#b18">[20]</ref>.</p><p>As a result of the clustering and data analysis process, several safe areas in Medellín were identified as strategic collection points. The routing solutions show clear and efficient routes for the distribution of aid, ensuring that resources reach the most vulnerable areas on time. This approach not only improves distribution logistics but also strengthens emergency response capacity throughout the year.</p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>B. VRP Spreadsheet Solver</head><p>VRP Spreadsheet Solver addresses over 64 variants of the Vehicle Routing Problem (VRP), incorporating features like selective customer visits, simultaneous pickups and deliveries, time windows, fleet composition, distance constraints, and vehicle destinations. Some of these variants are relevant in real-world applications but have not yet been formally studied. The VRP Spreadsheet Solver can serve as a foundation and benchmark for future research on these issues. In the following section, two case studies where the tool was applied are discussed, along with the introduction of a new VRP variant resulting from these studies <ref type="bibr" target="#b19">[21]</ref>. The geographical context of the distribution zones gives an idea of how the nodes can be connected or only to the collection centers. This worksheet features a scatter graph displaying the region's map retrieved from a GIS web service, showing how distribution points connect with collection centers using the VRP Spreadsheet Solver for optimized routing <ref type="bibr" target="#b19">[21]</ref>. </p></div>
+<div xmlns="http://www.tei-c.org/ns/1.0"><head>IV. CONCLUSIONS</head><p>The project has effectively achieved its objectives, starting with the selection of strategic locations for the distribution centers in Medellín. Through exhaustive data analysis and the application of clustering techniques, such as the K-means algorithm, both vulnerable and privileged areas were identified, resulting in a detailed map that facilitates project planning and diagnosis. However, it faced significant limitations, such as the lack of accurate data on population and food distribution in real time. To address this limitation in the future, the integration of advanced data collection technologies is recommended to enable more dynamic and efficient monitoring of food needs in these areas.</p><p>As for the development of delivery routes, the gravity method was applied, which considered factors such as distance, traffic, and load capacity, achieving significant optimization in the proposed routes. This not only improved operational efficiency, but also minimized logistics costs. However, a limitation was the variability in traffic conditions, which requires real-time adjustments. For the future, it is suggested to implement a route management system that uses machine learning algorithms, allowing continuous adaptation to changing conditions and thus improving delivery efficiency.</p><p>Finally, the project minimized delivery times through the use of the K-means algorithm, which identified distribution and collection centers, facilitating the collection and redistribution of food. This optimization not only helped reduce logistics costs but also increased the availability of fresh food in needy communities. However, reliance on existing infrastructure represented a limitation, suggesting that future collaborations with logistics and technology companies could improve transportation infrastructure. Taken together, these results lay the groundwork for implementing innovative logistics solutions to address food insecurity and reduce food waste in Medellín. ACKNOWLEDGMENT</p></div><figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_0"><head>Fig. 1 .</head><label>1</label><figDesc>Fig. 1. Location of schools in vulnerable zones.</figDesc><graphic coords="3,308.10,98.20,178.20,196.90" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_1"><head>Fig. 2 .</head><label>2</label><figDesc>Fig. 2. Location of schools in privileged zones.</figDesc><graphic coords="3,308.10,319.72,178.40,163.05" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_2"><head>Fig. 4 .</head><label>4</label><figDesc>Fig. 4. Spreadsheet structure of VRP Spreadsheet Solver[21].</figDesc><graphic coords="4,308.10,304.76,232.10,90.69" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_3"><head>Fig. 5 .</head><label>5</label><figDesc>Fig. 5. Routing from distribution zones to one of the collection centers.</figDesc><graphic coords="4,308.10,475.78,222.35,221.70" type="bitmap"/></figure>
+<figure xmlns="http://www.tei-c.org/ns/1.0" xml:id="fig_4"><head>Fig. 6 .</head><label>6</label><figDesc>Fig. 6. Routing from distribution zones to one of the collection centers.</figDesc><graphic coords="5,45.35,109.42,213.15,214.80" type="bitmap"/></figure>
+			<note xmlns="http://www.tei-c.org/ns/1.0" place="foot" xml:id="foot_0"><p>Authorized licensed use limited to: Univ Politecnica de Madrid. Downloaded on March 04,2026 at 15:08:25 UTC from IEEE Xplore. Restrictions apply.</p></note>
+		</body>
+		<back>
+
+			
+			<div type="acknowledgement">
+<div xmlns="http://www.tei-c.org/ns/1.0"><p>Acknowledgments to Politécnico Grancolombiano and their student chapter of IEEE TEMS to support this research project.</p></div>
+			</div>
+
+			<div type="references">
+
+				<listBibl>
+
+<biblStruct xml:id="b0">
+	<analytic>
+		<title level="a" type="main">El desperdicio de alimentos como externalidad negativa: soluciones contenidas en la normativa francesa y propuestas para el caso español</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Rosinés</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">Salamero</forename><surname>Teixidó</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Plana Farran</surname></persName>
+		</author>
+		<idno type="DOI">10.17345/rcda2640</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Revista Catalana de Dret Ambiental</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2020-06">Jun. 2020</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Inseguridad alimentaria en hogares donde habitan adultos mayores</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Estrada</forename><surname>Restrepo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">A</forename><surname>Giraldo Giraldo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">C</forename><surname>Restrepo</surname></persName>
+		</author>
+		<idno type="DOI">10.17533/udea.rfnsp.e342583</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Revista Facultad Nacional de Salud Pública</title>
+		<imprint>
+			<biblScope unit="volume">40</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2022">342583. Jan. 2022</date>
+			<pubPlace>Medellín, Colombia</pubPlace>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Based on Gravity Method of Logistics Distribution Center Location Strategy Research</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno type="DOI">10.2991/lemcs-14.2014.134</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Efectos de los Biocombustibles en la Seguridad Alimentaria en Colombia: Una Aproximación Sistémica</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Giraldo Ramírez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">Arango</forename><surname>Aramburo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">E</forename><surname>Jaramillo</surname></persName>
+		</author>
+		<idno type="DOI">10.15446/rfnam.v67n2.44180</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Rev Fac Nac Agron Medellin</title>
+		<imprint>
+			<biblScope unit="volume">67</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="7375" to="7385"/>
+			<date type="published" when="2014-07">Jul. 2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b4">
+	<analytic>
+		<title/>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">I</forename><surname>Camargo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">C</forename><surname>Quintero</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><forename type="middle">F</forename><surname>Herrán</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">"seguridad Alimentaria En Colombia Y Modelo</forename><surname>Rasch</surname></persName>
+		</author>
+		<idno type="DOI">10.4067/S0717-75182012000200006</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Revista chilena de nutrición</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="168" to="179"/>
+			<date type="published" when="2012-06">Jun. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b5">
+	<analytic>
+		<title level="a" type="main">¿SON VÁLIDAS?</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">Z</forename><surname>Jiménez</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Prada</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Fernando Herrán</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename></persName>
+		</author>
+		<author>
+			<persName><forename type="first">"escalas Para Medir La Seguridad Alimentaria En</forename><surname>Colombia</surname></persName>
+		</author>
+		<idno type="DOI">10.4067/S0717-75182012000100001</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Revista chilena de nutrición</title>
+		<imprint>
+			<biblScope unit="volume">39</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="8" to="17"/>
+			<date type="published" when="2012-03">Mar. 2012</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Evaluating Food Packaging Waste in Schools: A Systematic Literature Review</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Heiges</surname></persName>
+		</author>
+		<idno type="DOI">10.3390/ijerph19095607</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Int J Environ Res Public Health</title>
+		<imprint>
+			<biblScope unit="volume">19</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page">5607</biblScope>
+			<date type="published" when="2022-05">May 2022</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b7">
+	<monogr>
+		<title level="m" type="main">Food waste index report 2024</title>
+		<author>
+			<persName><surname>Unep</surname></persName>
+		</author>
+		<ptr target="https://www.unep.org/es/resources/publicaciones/informe-sobre-el-indice-de-desperdicio-de-food-2024"/>
+		<imprint>
+			<date type="published" when="2024-07-28">2024. Jul. 28, 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b8">
+	<monogr>
+		<title level="m" type="main">Food Waste Action Week campaign assets 2024</title>
+		<author>
+			<persName><surname>Wrap</surname></persName>
+		</author>
+		<ptr target="https://www.wrap.ngo/taking-action/citizen-behaviour-change/love-food-hate-waste/food-waste-action-week/2024-campaign-assets"/>
+		<imprint>
+			<date type="published" when="2024-07-28">2024. Jul. 28, 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Logistics optimization through a social approach for food distribution</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Granillo-Macías</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.seps.2020.100972</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Socioecon Plann Sci</title>
+		<imprint>
+			<biblScope unit="volume">76</biblScope>
+			<biblScope unit="page">100972</biblScope>
+			<date type="published" when="2021-08">Aug. 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b10">
+	<monogr>
+		<title level="m" type="main">FAO Strategy for Private Sector Engagement</title>
+		<author>
+			<persName><surname>Fao</surname></persName>
+		</author>
+		<idno type="DOI">10.4060/cb3352en</idno>
+		<imprint>
+			<date type="published" when="2021">2021-2025. FAO, 2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b11">
+	<monogr>
+		<title level="m" type="main">El Distrito recuperó más de 40.000 kilos de frutas y verduras de la Plaza Minorista para 1.436 familias vulnerables</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Galvis</surname></persName>
+		</author>
+		<ptr target="https://www.medellin.gov.co/es/sala-de-prensa/noticias/el-distrito-recupero-mas-de-40-000-kilos-de-frutas-y-verduras-de-la-plaza-minorista-para-1-436-familias-vulnerables/"/>
+		<imprint>
+			<date type="published" when="2023-07-28">2023. Jul. 28, 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b12">
+	<monogr>
+		<title level="m" type="main">El lío con las cifras sobre desnutrición crónica en niños en Medellín</title>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">F</forename><surname>Orozco</surname></persName>
+		</author>
+		<ptr target="https://www.elespectador.com/salud/el-lio-con-las-cifras-sobre-desnutricion-cronica-en-ninos-en-medellin/"/>
+		<imprint>
+			<date type="published" when="2023-07-28">2023. Jul. 28, 2024</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b13">
+	<monogr>
+		<ptr target="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html"/>
+		<title level="m">Geovisor Consulta de Sedes Educativas del SISE</title>
+		<imprint>
+			<date type="published" when="2024-07-28">2024. Jul. 28, 2024. Sep. 17, 2024</date>
+			<biblScope unit="volume">15</biblScope>
+		</imprint>
+	</monogr>
+	<note>scikit-learn, "sklearn.cluster.KMeans</note>
+</biblStruct>
+
+<biblStruct xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Using the triangle inequality to accelerate k-means</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Elkan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 20th international conference on Machine Learning (ICML-03)</title>
+		<meeting>the 20th international conference on Machine Learning (ICML-03)</meeting>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+			<biblScope unit="page" from="147" to="153"/>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Pérdida y desperdicio de alimentos. Problema que urge solución</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Alzate-Yepes</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">M</forename><surname>Orozco-Soto</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Perspectivas en Nutrición Humana</title>
+		<imprint>
+			<biblScope unit="volume">23</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="133" to="139"/>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b16">
+	<monogr>
+		<title level="m" type="main">Instituciones educativas oficiales y de cobertura</title>
+		<author>
+			<persName><forename type="first">Secretaría</forename><surname>De Educación De Medellín</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Business plan de una empresa de transporte de mercancías</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ares</surname></persName>
+		</author>
+		<ptr target="https://upcommons.upc.edu/bitstream/handle/2099.1/6368/06.pdf"/>
+	</analytic>
+	<monogr>
+		<title level="j">Factores de Localización. Recuperado de</title>
+		<imprint>
+			<date type="published" when="2003">2003</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b18">
+	<monogr>
+		<title level="m" type="main">Based on Gravity Method of Logistics Distribution Center Location Strategy Research</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhao</surname></persName>
+		</author>
+		<idno type="DOI">10.2991/lemcs-14.2014.134</idno>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+<biblStruct xml:id="b19">
+	<analytic>
+		<title level="a" type="main">An open source Spreadsheet Solver for Vehicle Routing Problems</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Erdoğan</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.cor.2017.02.022</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Comput Oper Res</title>
+		<imprint>
+			<biblScope unit="volume">84</biblScope>
+			<biblScope unit="page" from="62" to="72"/>
+			<date type="published" when="2017-08">Aug. 2017</date>
+		</imprint>
+	</monogr>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

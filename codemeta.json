@@ -1,0 +1,23 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Research and Analysis over Open Source Papers (featuring Grobid)",
+  "description": "A Python tool that analyzes research papers using Grobid TEI XML output. It generates a keyword cloud from abstracts, a visualization of the number of figures per article, and extracts links found in each paper.",
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "codeRepository": "https://github.com/Abielmenda/IndividualAssigment",
+  "issueTracker": "https://github.com/Abielmenda/IndividualAssigment/issues",
+  "programmingLanguage": "Python",
+  "author": {
+    "@type": "Person",
+    "givenName": "Alberto",
+    "familyName": "Aragón Calvo"
+  },
+  "dateCreated": "2026-03-11",
+  "keywords": [
+    "grobid",
+    "text mining",
+    "research papers",
+    "scientific analysis",
+    "machine learning"
+  ]
+}

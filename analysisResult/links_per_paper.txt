@@ -1,0 +1,46 @@
+p0
+  https://www.unep.org/es/resources/publicaciones/informe-sobre-el-indice-de-desperdicio-de-food-2024
+  https://upcommons.upc.edu/bitstream/handle/2099.1/6368/06.pdf
+  https://www.medellin.gov.co/es/sala-de-prensa/noticias/el-distrito-recupero-mas-de-40-000-kilos-de-frutas-y-verduras-de-la-plaza-minorista-para-1-436-familias-vulnerables/
+  https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+  https://www.wrap.ngo/taking-action/citizen-behaviour-change/love-food-hate-waste/food-waste-action-week/2024-campaign-assets
+  https://www.elespectador.com/salud/el-lio-con-las-cifras-sobre-desnutricion-cronica-en-ninos-en-medellin/
+
+p1
+  https://github.com/tmlr-group/RePO
+  https://github.com/huggingface/trl
+  http://joschu.net/blog/kl-approx.html
+
+p2
+  No links found
+
+p3
+  https://github.com/Tobeginwith/DC-Merge
+
+p4
+  https://vicuna.lmsys.org
+  https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/
+
+p5
+  https://github.com/tsly123/SEA_PEFT
+
+p6
+  https://captum.ai/
+  https://openreview.net/forum?id=wTIzpqX121
+  https://github.com/AdityaLab/Hiereinterpret
+
+p7
+  https://github.com/baccuslab/CODEC_ICLR_2026
+  https://github.com/baccuslab/CODEC
+  JMLR.org
+
+p8
+  https://github.com/meta-llama/llama-models/blob/main/models/llama3_3/MODEL_CARD.md
+  https://aclanthology.org
+  https://docs.camel-ai.org/key_modules/datagen
+  https://platform.openai.com/docs/models/gpt-oss-120b
+
+p9
+  http://www.ijrti.org/
+  www.ijrti.org
+

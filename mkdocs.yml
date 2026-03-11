@@ -1,0 +1,13 @@
+site_name: Paper Analysis
+site_url: https://paper-analysis.readthedocs.io
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+
+theme:
+  name: material
+
+plugins:
+  - search
