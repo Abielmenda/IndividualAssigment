@@ -24,7 +24,7 @@ jobs:
 
     - name: Run analysis script
       run: |
-        python scripts/xmlAnalyzer.py
+        python script/xmlAnalyzer.py
 
     - name: Run tests
       run: |
